@@ -226,10 +226,10 @@ body {
 }
 
 .hero-container {
-  margin-bottom: 20px;
-  /* display: flex;
+  /* margin-bottom: 20px; */
+  display: flex;
   flex-direction: column;
-  justify-content: center; */
+  /* justify-content: center; */
 }
 
 .hero-buynow-title {
@@ -241,6 +241,7 @@ body {
   line-height: 1.2;
   letter-spacing: 0.01em;
   color: var(--color-scheme-2-text);
+  margin-bottom: 20px;
 }
 .hero-buynow-title::after {
   content: '.';
@@ -296,7 +297,11 @@ body {
   }
   .hero-container {
     display: flex;
-    gap: 24px;
+    /* gap: 24px; */
+  }
+  .hero-buynow-wrapper {
+    display: flex;
+    justify-content: space-between;
   }
   .hero-buynow-title {
     width: 340px;
@@ -332,7 +337,7 @@ body {
 /* Styles for Desktop devices */
 @media screen and (min-width: 1440px) {
   .hero-container {
-    gap: 32px;
+    /* gap: 32px; */
   }
   .hero-buynow-title {
     width: 640px;
