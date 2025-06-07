@@ -107,13 +107,14 @@ img {
 
 /* Typography from mockup */
 :root {
+  /* main */
   --text-regular-normal: 400 16px / 1.6 'Fira Sans', sans-serif;
   --text-regular-semi-bold: 600 16px / 1.6 'Fira Sans', sans-serif;
   --text-medium-normal: 400 18px / 1.6 'Fira Sans', sans-serif;
   --text-medium-semi-bold: 600 18px / 1.6 'Fira Sans', sans-serif;
   --text-small-normal: 400 14px / 1.6 'Fira Sans', sans-serif;
   --text-large-semi-bold: 600 20px / 1.6 'Fira Sans', sans-serif;
-
+  /* 2nd */
   --heading-desktop-h1: 700 56px / 1.2 'Comfortaa', sans-serif;
   --heading-desktop-h2: 700 48px / 1.2 'Comfortaa', sans-serif;
   --heading-desktop-h4: 700 32px / 1.4 'Comfortaa', sans-serif;
@@ -226,6 +227,9 @@ body {
 
 .hero-container {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-buynow-title {
@@ -338,6 +342,45 @@ body {
     width: 640px;
   }
 }
+/* <!-- section support --> */
+@media screen {
+  .section-support {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .container {
+  }
+
+  .support-title {
+    font: var(--heading-mobile-h2);
+    margin-bottom: 24px;
+  }
+  .support-text {
+    font: var(--text-medium-normal);
+    margin-bottom: 32px;
+  }
+
+  .support-form-wrapper {
+  }
+  .support-form {
+  }
+  .support-form-group {
+  }
+  .support-form-label {
+    font: var(--text-regular-normal);
+    color: var(--color-scheme-1-text);
+  }
+  .support-input {
+  }
+  .support-form-group-textarea {
+  }
+  .support-submit-button {
+  }
+  .support-img-wrapper {
+  }
+}
+
+/* <!-- section support --> */
 /* foooter */
 
 .footer {

@@ -172,6 +172,83 @@
         </ul>
       </div>
     </section>
+    <!-- section support -->
+    <section class="section-support" id="section-support">
+      <div class="container">
+        <div class="support-form-wrapper">
+          <h2 class="support-title">Залишились питання? Зв'яжіться з нами!</h2>
+          <p class="support-text">Ми тут, щоб допомогти!</p>
+          <form class="support-form">
+            <div class="support-form-group">
+              <label class="support-form-label" for="user-name">Ім'я</label>
+              <input
+                type="text"
+                class="support-input"
+                id="user-name"
+                name="user-name"
+                placeholder="Іван"
+                required
+              />
+            </div>
+            <div class="support-form-group">
+              <label class="support-form-label" for="user-email"
+                >Електронна пошта</label
+              >
+              <input
+                type="email"
+                class="support-input"
+                id="user-email"
+                name="user-email"
+                placeholder="hello@ecotote.com"
+                required
+              />
+            </div>
+            <div class="support-form-group-textarea">
+              <label class="support-form-label" for="user-comment"
+                >Повідомлення</label
+              >
+              <textarea
+                name="user-comment"
+                id="user-comment"
+                placeholder="Введіть своє повідомлення..."
+              ></textarea>
+            </div>
+            <button class="support-submit-button" type="submit">
+              Надіслати
+            </button>
+          </form>
+        </div>
+        <div class="support-img-wrapper">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              type="image/webp"
+              srcset="
+                ./img/jpg/support/support-pc.jpg    1x,
+                ./img/jpg/support/support-pc@2x.jpg 2x
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              type="image/webp"
+              srcset="
+                ./img/jpg/support/support-tab.jpg    1x,
+                ./img/jpg/support/support-tab@2x.jpg 2x
+              "
+            />
+            <img
+              src="./img/jpg/support/support-mob.jpg"
+              srcset="./img/jpg/support/support-mob@2x.jpg 2x"
+              alt="bag"
+              width=""
+              height=""
+            />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- section support -->
 
     <!-- </footer> -->
     <footer class="footer">
