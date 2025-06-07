@@ -271,8 +271,8 @@ body {
   line-height: 1.6;
   color: var(--color-white);
   margin-bottom: 24px;
-  transition: border-color 250ms linear, color 250ms linear,
-    background 250ms linear;
+  transition: border-color var(--transition-base), color var(--transition-base),
+    background var(--transition-base);
 }
 .hero-buy-button:hover,
 .hero-buy-button:focus {
@@ -446,6 +446,9 @@ body {
     background: var(--color-neutral-darkest);
     font: var(--text-regular-normal);
     color: var(--color-white);
+
+    transition: border-color var(--transition-base),
+      color var(--transition-base), background var(--transition-base);
   }
 
   .support-submit-button:hover,
