@@ -276,9 +276,13 @@ body {
 }
 .hero-buy-button:hover,
 .hero-buy-button:focus {
-  border-color: var(--color-neutral-darkest);
-  color: var(--color-neutral-darkest);
-  background: transparent;
+  opacity: 0.5;
+}
+.hero-buy-button:active {
+  border-color: var(--color-emerald-darkest);
+  background: var(--color-emerald-darkest);
+  color: var(--color-white);
+  opacity: 0.6;
 }
 .hero-image-wrapper {
   justify-self: center;
@@ -336,9 +340,6 @@ body {
 }
 /* Styles for Desktop devices */
 @media screen and (min-width: 1440px) {
-  .hero-container {
-    /* gap: 32px; */
-  }
   .hero-buynow-title {
     width: 640px;
     font-size: 56px;
@@ -350,8 +351,8 @@ body {
 /* <!-- section support --> */
 @media screen {
   .section-support {
-    margin-top: 32px;
-    margin-bottom: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
   .container {
   }
@@ -368,20 +369,52 @@ body {
   .support-form-wrapper {
   }
   .support-form {
+    margin-bottom: 24px;
   }
   .support-form-group {
+    margin-bottom: 24px;
   }
   .support-form-label {
     font: var(--text-regular-normal);
     color: var(--color-scheme-1-text);
+    margin-bottom: 8px;
+    display: block;
   }
   .support-input {
+    width: 100%;
+
+    border: 1px solid var(--opacity-neutral-darkest-15);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font: var(--text-regular-normal);
+    background: var(--color-scheme-1-background);
   }
   .support-form-group-textarea {
+    margin-bottom: 24px;
+  }
+  .support-textarea {
+    width: 100%;
+    height: 180px;
+    resize: none;
+    /* outline: transparent; */
+    font: var(--text-regular-normal);
+    border: 1px solid var(--opacity-neutral-darkest-15);
+    border-radius: 6px;
+    padding: 12px;
+    background: var(--color-scheme-1-background);
   }
   .support-submit-button {
+    border: 1px solid var(--color-neutral-darkest);
+    border-radius: 6px;
+    padding: 12px 24px;
+    width: 288px;
+    height: 50px;
+    background: var(--color-neutral-darkest);
+    font: var(--text-regular-normal);
+    color: var(--color-white);
   }
-  .support-img-wrapper {
+  .support-img-wrapper-item {
+    border-radius: 40px;
   }
 }
 
