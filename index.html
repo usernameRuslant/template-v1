@@ -178,11 +178,11 @@
     </section>
     <!-- section support -->
     <section class="section-support" id="section-support">
-      <div class="container">
+      <div class="container container-support">
         <div class="support-form-wrapper">
           <h2 class="support-title">Залишились питання? Зв'яжіться з нами!</h2>
           <p class="support-text">Ми тут, щоб допомогти!</p>
-          <form class="support-form">
+          <form class="support-form" autocomplete="off">
             <div class="support-form-group">
               <label class="support-form-label" for="user-name">Ім'я</label>
               <input
@@ -190,9 +190,11 @@
                 class="support-input"
                 id="user-name"
                 name="user-name"
+                pattern="[А-Яа-яЁёІіЇїЄєA-Za-z\s\-]{4,50}"
                 placeholder="Іван"
                 required
               />
+              <p class="text-invalid">Error text, min 4 max 50</p>
             </div>
             <div class="support-form-group">
               <label class="support-form-label" for="user-email"
@@ -204,8 +206,10 @@
                 id="user-email"
                 name="user-email"
                 placeholder="hello@ecotote.com"
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                 required
               />
+              <p class="text-invalid">Error text</p>
             </div>
             <div class="support-form-group-textarea">
               <label class="support-form-label" for="user-comment"
@@ -216,7 +220,11 @@
                 name="user-comment"
                 id="user-comment"
                 placeholder="Введіть своє повідомлення..."
+                required
+                minlength="4"
+                maxlength="500"
               ></textarea>
+              <p class="text-invalid">Error text</p>
             </div>
             <button class="support-submit-button" type="submit">
               Надіслати
@@ -246,8 +254,6 @@
               src="./img/jpg/support/support-mob.jpg"
               srcset="./img/jpg/support/support-mob@2x.jpg 2x"
               alt="bag"
-              width="288"
-              height="428"
             />
           </picture>
         </div>
