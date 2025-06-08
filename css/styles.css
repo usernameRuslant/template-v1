@@ -235,10 +235,6 @@ body {
 .hero-buynow-title {
   position: relative;
   font-family: var(--second-family);
-  font-weight: 700;
-  font-size: 40px;
-
-  line-height: 1.2;
   letter-spacing: 0.01em;
   color: var(--color-scheme-2-text);
   margin-bottom: 20px;
@@ -251,9 +247,6 @@ body {
 }
 .hero-buynow-text {
   font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.6;
   color: var(--color-scheme-2-text);
   margin-bottom: 24px;
 }
@@ -265,24 +258,23 @@ body {
   width: 288px;
   height: 50px;
   background: var(--color-neutral-darkest);
-  font-weight: 400;
-  font-size: 16px;
+  font: var(--text-regular-normal);
+
   text-align: center;
-  line-height: 1.6;
+
   color: var(--color-white);
   margin-bottom: 24px;
-  transition: border-color var(--transition-base), color var(--transition-base),
-    background var(--transition-base);
+  transition: border-color var(--transition-base),
+    background var(--transition-base), opacity var(--transition-base);
 }
 .hero-buy-button:hover,
 .hero-buy-button:focus {
-  opacity: 0.5;
-}
-.hero-buy-button:active {
   border-color: var(--color-emerald-darkest);
   background: var(--color-emerald-darkest);
-  color: var(--color-white);
   opacity: 0.6;
+}
+.hero-buy-button:active {
+  opacity: 0.5;
 }
 .hero-image-wrapper {
   justify-self: center;
@@ -294,14 +286,13 @@ body {
 @media screen and (min-width: 768px) {
   .hero-section {
     padding-top: 32px;
-    padding-bottom: 64px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .hero-container {
     display: flex;
-    /* gap: 24px; */
   }
   .hero-buynow-wrapper {
     display: flex;
@@ -316,23 +307,19 @@ body {
 
   .hero-buynow {
     width: 340px;
-
     display: flex;
     flex-direction: column;
   }
   .hero-buynow-text {
-    font-size: 18px;
+    font: var(--text-medium-normal);
     margin-bottom: 32px;
   }
   .hero-buy-button {
     padding: 12px 24px;
-    /* 148>150 */
     width: 148px;
     height: 50px;
-    font-weight: 400;
-    font-size: 16px;
+    font: var(--text-regular-normal);
     white-space: nowrap;
-    line-height: 1.6;
   }
   .hero-image {
     display: block;
@@ -342,7 +329,7 @@ body {
 @media screen and (min-width: 1440px) {
   .hero-buynow-title {
     width: 640px;
-    font-size: 56px;
+    font: var(--heading-desktop-h1);
   }
   .hero-buynow {
     width: 640px;
