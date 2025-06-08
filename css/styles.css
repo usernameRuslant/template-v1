@@ -235,6 +235,7 @@ body {
 .hero-buynow-title {
   position: relative;
   font-family: var(--second-family);
+  font: var(--heading-mobile-h1);
   letter-spacing: 0.01em;
   color: var(--color-scheme-2-text);
   margin-bottom: 20px;
@@ -341,9 +342,6 @@ body {
     padding-top: 32px;
     padding-bottom: 32px;
   }
-  .container {
-  }
-
   .support-title {
     font: var(--heading-mobile-h2);
     margin-bottom: 24px;
@@ -353,8 +351,6 @@ body {
     margin-bottom: 32px;
   }
 
-  .support-form-wrapper {
-  }
   .support-form {
     margin-bottom: 24px;
   }
@@ -362,6 +358,9 @@ body {
   .support-form-group-textarea {
     margin-bottom: 24px;
     position: relative;
+  }
+  .support-form-group-textarea {
+    display: block;
   }
   .support-form-label {
     font: var(--text-regular-normal);
@@ -389,13 +388,20 @@ body {
     line-height: 1.6;
     display: none;
   }
-
+  .text-invalid-textarea {
+    position: absolute;
+    color: var(--color-error-red);
+    font-size: 16px;
+    line-height: 1.6;
+    display: none;
+    bottom: -18px;
+  }
   .support-input:not(:placeholder-shown):invalid,
   .support-textarea:not(:placeholder-shown):invalid {
     border-color: var(--color-error-red);
     color: var(--color-error-red);
   }
-  .support-textarea:not(:placeholder-shown):invalid ~ .text-invalid {
+  .support-textarea:not(:placeholder-shown):invalid ~ .text-invalid-textarea {
     border-color: var(--color-error-red);
 
     display: block;
@@ -445,8 +451,20 @@ body {
     border: 1px solid var(--color-emerald-darkest);
   }
 
-  .support-img-wrapper-item {
+  .support-img-wrapper {
     border-radius: 40px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 288px;
+    height: 428px;
+
+    background-image: image-set(
+      url('../img/webp/support/support-mob.webp') type('image/webp') 1x,
+      url('../img/webp/support/support-mob@2x.webp') type('image/webp') 2x,
+      url('../img/jpg/support/support-mob.jpg') type('image/jpeg') 1x,
+      url('../img/jpg/support/support-mob@2x.jpg') type('image/jpeg') 2x
+    );
   }
 }
 @media screen and (min-width: 768px) {
@@ -454,33 +472,22 @@ body {
     padding-top: 64px;
     padding-bottom: 64px;
   }
-  .container {
-  }
-  .support-form-wrapper {
-  }
+
   .support-title {
     width: 468px;
-  }
-  .support-text {
-  }
-  .support-form {
-  }
-  .support-form-group {
-  }
-  .support-form-label {
-  }
-  .support-input {
-  }
-  .support-form-group-textarea {
-  }
-  .support-textarea {
   }
   .support-submit-button {
     width: 249px;
   }
   .support-img-wrapper {
-  }
-  .support-img-wrapper-item {
+    width: 704px;
+    height: 428px;
+    background-image: image-set(
+      url('../img/webp/support/support-tab.webp') type('image/webp') 1x,
+      url('../img/webp/support/support-tab@2x.webp') type('image/webp') 2x,
+      url('../img/jpg/support/support-tab.jpg') type('image/jpeg') 1x,
+      url('../img/jpg/support/support-tab@2x.jpg') type('image/jpeg') 2x
+    );
   }
 }
 @media screen and (min-width: 1440px) {
@@ -500,26 +507,19 @@ body {
     letter-spacing: 0.01em;
     width: 644px;
   }
-  .support-text {
-  }
-  .support-form {
-  }
-  .support-form-group {
-  }
-  .support-form-label {
-  }
-  .support-input {
-  }
-  .support-form-group-textarea {
-  }
-  .support-textarea {
-  }
+
   .support-submit-button {
     width: 198px;
   }
   .support-img-wrapper {
-  }
-  .support-img-wrapper-item {
+    background-image: image-set(
+      url('../img/webp/support/support-pc.webp') type('image/webp') 1x,
+      url('../img/webp/support/support-pc@2x.webp') type('image/webp') 2x,
+      url('../img/jpg/support/support-pc.jpg') type('image/jpeg') 1x,
+      url('../img/jpg/support/support-pc@2x.jpg') type('image/jpeg') 2x
+    );
+    width: 644px;
+    height: 767px;
   }
 }
 /* <!-- section support --> */
@@ -532,11 +532,6 @@ body {
   /* display: flex;
   flex-direction: column;
   align-items: center; */
-}
-.container-footer {
-  /* display: flex; */
-  /* flex-direction: column;
-  justify-content: center; */
 }
 
 .footer-logo {
@@ -564,8 +559,7 @@ body {
   line-height: 1.6;
   color: var(--color-scheme-2-text);
 }
-.footer-menu-link {
-}
+
 .footer-social-block-list {
   display: flex;
   align-items: center;
@@ -573,8 +567,7 @@ body {
   gap: 12px;
   margin-bottom: 48px;
 }
-.footer-social-block-item {
-}
+
 .footer-social-block-link {
   display: flex;
   justify-content: center;
@@ -583,8 +576,7 @@ body {
 .footer-social-block-icon {
   fill: #030a06;
 }
-.footer-contacts {
-}
+
 .footer-contacts-list {
   display: flex;
   flex-direction: column;
@@ -599,8 +591,7 @@ body {
   line-height: 1.6;
   color: var(--color-scheme-2-text);
 }
-.footer-contacts-link {
-}
+
 .footer-text {
   justify-self: center;
   font: var(--text-small-normal);
@@ -656,11 +647,7 @@ body {
     padding-top: 80px;
     padding-bottom: 80px;
   }
-  .container-footer {
-    /* display: flex; */
-    /* flex-direction: column;
-    justify-content: center; */
-  }
+
   .footer-wrapper-top {
     display: flex;
     justify-content: space-between;
