@@ -12,7 +12,7 @@
       );
     background-size: cover;
     background-repeat: no-repeat;
-    width: 320px;
+    width: 100%;
     height: 348px;
     padding-top: 64px;
     padding-bottom: 64px;
@@ -51,7 +51,7 @@
         url('../img/jpg/feature/feature-tab.jpg') type('image/jpeg') 1x,
         url('../img/jpg/feature/feature-tab@2x.jpg') type('image/jpeg') 2x
       );
-    width: 768px;
+    width: 100%;
     height: 325px;
   }
 
