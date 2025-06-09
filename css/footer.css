@@ -84,6 +84,7 @@
 .footer-text {
   justify-self: center;
   font: var(--text-small-normal);
+  text-align: center;
 }
 .footer-divider {
   border: 1px solid var(--color-scheme-2-border);
